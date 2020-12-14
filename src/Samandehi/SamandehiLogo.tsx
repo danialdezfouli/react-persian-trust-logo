@@ -33,21 +33,12 @@ const SamandehiLogo = ({
 
   return (
     <div id="samandehi-logo">
-      {verified ? (
-        <img
-          src={samandehiVerified}
-          alt={alt}
-          onClick={handleClick}
-          {...props}
-        />
-      ) : (
-        <img
-          src={samandehiUnVerified}
-          alt={alt}
-          onClick={handleClick}
-          {...props}
-        />
-      )}
+      <img
+        src={verified ? samandehiVerified : samandehiUnVerified}
+        alt={alt}
+        onClick={handleClick}
+        {...props}
+      />
     </div>
   );
 };
